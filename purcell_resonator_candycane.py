@@ -32,7 +32,7 @@ class CandyCanePurcell(QComponent):
         up_from_pin_start="1377um",
         down_from_turn="836.8um",
 
-        mini_rect_width="89.282um",
+        mini_rect_width="89.282um", # capacitative coupling region
         mini_rect_length="10.9um",
         mini_rect_add_y="750um",
         termination_gap="6um",
