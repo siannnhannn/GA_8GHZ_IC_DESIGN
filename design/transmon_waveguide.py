@@ -181,7 +181,7 @@ class GiantAtomWaveguide(QComponent):
         feed_clearance="150um",      # feed line runs this far above the top row of block A (only used if start_y is None)
         y_max="2.35mm",              # highest the feed line may reach
         y_min="-2.35mm",             # lowest the lower blocks may reach
-        target_length="22.27mm",        # run centre -> next run centre
+        target_length="22.2696mm",        # run centre -> next run centre
         rows=0,                      # 0 = auto, else force an even row count
         pitch="90um",               # row spacing, must be >= 2*fillet
         fillet="45um",               # radius of all waveguide bends except those at the coupled runs
