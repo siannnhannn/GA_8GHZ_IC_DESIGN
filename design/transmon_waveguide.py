@@ -177,7 +177,7 @@ class GiantAtomWaveguide(QComponent):
         feed_spacing="100um",        # feed line runs this far from the (parallel) line under it
         # --- serpentine blocks (x measured from qubit_x)
         block_x_min="0.75mm",        # left turns of all four blocks (closest to the qubit)
-        serp_x_max="2mm",          # right-most x of the blocks = start of the launchpad
+        serp_x_max="1.9mm",          # right-most x of the blocks = start of the launchpad
         feed_clearance="150um",      # feed line runs this far above the top row of block A (only used if start_y is None)
         y_max="2.35mm",              # highest the feed line may reach
         y_min="-2.35mm",             # lowest the lower blocks may reach
