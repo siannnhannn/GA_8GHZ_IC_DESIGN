@@ -16,7 +16,7 @@ class Squid(QComponent):
         t_vertical_length="6um",
 
         side_arm_width="10um",
-        side_arm_length="52.5um",
+        side_arm_length="41um",
         side_arm_move_y="0um",
 
         stem_x="0um",
@@ -433,7 +433,7 @@ class Squid(QComponent):
             "specifies the two transmon_side of the side arm"
             y_side_arm = attach_y + p.side_arm_move_y
             if p.transmon_side == 1:
-                x_side_arm = stem_x - stem_width/2 - p.side_arm_length/2
+                x_side_arm = stem_x - stem_width/2 - p.side_arm_length/2 + 0.0003
                 x_t_horizontal = x_side_arm - p.side_arm_length/2 + p.t_horizontal_length/2
                 x_t_vertical = x_t_horizontal + p.t_horizontal_length/2 + p.t_vertical_width/2
                 
