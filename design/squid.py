@@ -438,7 +438,7 @@ class Squid(QComponent):
                 x_t_vertical = x_t_horizontal + p.t_horizontal_length/2 + p.t_vertical_width/2
                 
             elif p.transmon_side == -1:
-                x_side_arm = stem_x + stem_width/2 + p.side_arm_length/2
+                x_side_arm = stem_x + stem_width/2 + p.side_arm_length/2 - 0.00033
                 x_t_horizontal = x_side_arm + p.side_arm_length/2 - p.t_horizontal_length/2
                 x_t_vertical = x_t_horizontal - p.t_horizontal_length/2 - p.t_vertical_width/2
             else:
