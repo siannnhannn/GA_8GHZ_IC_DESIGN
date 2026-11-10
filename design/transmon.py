@@ -31,6 +31,7 @@ class myTransmon(QComponent):
         pad_side_length="100um",
         pad_gap="58um",
         orientation="90",
+        layer="5",
         # --- SQUID on the lead
         squid="False",                 # False: no SQUID
         squid_offset="150um",         # distance from the pad (start of the lead) to the SQUID centre

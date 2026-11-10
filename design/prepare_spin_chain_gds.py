@@ -12,13 +12,13 @@ from shapely.geometry import Point, Polygon, box
 from shapely.strtree import STRtree
 from shapely.validation import make_valid
 
-from GA_8GHZ_IC_DESIGN.airbridge_route import (
+from airbridge_route import (
     _arclength_frame,
     _collapse_uturn_corners,
     _fillet_centerline,
     _sample_at,
 )
-from GA_8GHZ_IC_DESIGN.normalize_gds import normalize_gds
+from normalize_gds import normalize_gds
 
 
 RR_ENCLOSURE = 0.0015  # 1.5 um in the design's millimetre user unit
@@ -146,6 +146,8 @@ def prepare_spin_chain_gds(
     turn_radius: float = 0.050,
     layer5_signal_elements=None,
     layer5_subtract_elements=None,
+    reserved_points=None,
+    reserved_radius: float = 0.090,
 ):
     """Clean invalid bridges, restore every waveguide-turn bridge, and flatten."""
 
@@ -261,6 +263,21 @@ def prepare_spin_chain_gds(
     corner_lengths, uturn_lengths = _collapse_uturn_corners(
         frame, corner_lengths, turn_radius, return_uturns=True
     )
+    # Turns inside the route's airbridge keepout zones (e.g. the waveguide's
+    # qubit pocket and coupling_fillet corners) intentionally carry no bridge,
+    # so they are neither restored nor required to have an apex bridge.
+    if reserved_points is not None and len(reserved_points):
+        reserved = np.asarray(reserved_points, dtype=float)[:, :2]
+
+        def _is_reserved(length):
+            x, y, _ = _sample_at(frame, length)
+            return bool(
+                np.any(np.hypot(reserved[:, 0] - x, reserved[:, 1] - y)
+                       < reserved_radius)
+            )
+
+        corner_lengths = [s for s in corner_lengths if not _is_reserved(s)]
+        uturn_lengths = [s for s in uturn_lengths if not _is_reserved(s)]
     corner_owners = []
     for length in corner_lengths:
         x, y, _ = _sample_at(frame, length)

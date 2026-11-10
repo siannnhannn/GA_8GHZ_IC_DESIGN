@@ -1,0 +1,19 @@
+SQUILL SQP 3.0 KLayout preflight v1.2
+Cell: SPIN_CHAIN
+DBU: 0.0005 um
+Mode: production
+Violations: 43
+
+BR.CE.E.1: 30
+M1.W.1: 1
+RR.WL.2: 10
+SE.DEV.MET.S.1: 2
+
+Not implemented; use official Calibre signoff:
+- POST.2 force-distribution symmetry (manual by specification)
+- full Dolan finger decomposition: SE.DJ.1-.4 and DFM lengths
+- array-JJ topology: SE.DA.1 and window pairing
+- net-aware electrical overlap rules SE.SE.O.1/O.2
+- bridge crossover/tether bin extraction BR.3/BR.4/BR.WL.1
+- BUMP.2 redundancy (manual by specification)
+- process alignment-cross integrity and foundry auto-waivers

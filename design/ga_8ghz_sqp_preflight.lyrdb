@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>Transparent preflight based on the SQP 3.0 public rule tables; official signoff still requires the supplied encrypted Calibre deck.</description>
+ <original-file>active cellview</original-file>
+ <generator>klayout_sqp_drc.py 1.2</generator>
+ <top-cell/>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>M1.W.1: M1 minimum width 2.0 um</name>
+   <description/>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SE.DEV.MET.S.1: SE_device to same-tier base metal space &gt;= 4 um</name>
+   <description/>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um</name>
+   <description/>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um</name>
+   <description/>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>SPIN_CHAIN</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+  <item>
+   <tags/>
+   <category>'M1.W.1: M1 minimum width 2.0 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (70.5005,-501.459;70.498,-501.458;70.498,-498.0515;72.503,-498.7025)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'SE.DEV.MET.S.1: SE_device to same-tier base metal space &gt;= 4 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-70.502,-461.1555;-70.502,-454.8445;-66.668,-455.998;-66.668,-460.002)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'SE.DEV.MET.S.1: SE_device to same-tier base metal space &gt;= 4 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-70.502,-445.1555;-70.502,-438.8445;-66.668,-439.998;-66.668,-444.002)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1707.673,-2354.781;-1707.673,-2341.281;-1704.673,-2341.281;-1704.673,-2316.281;-1707.673,-2316.281;-1707.673,-2302.781;-1694.173,-2302.781;-1694.173,-2316.281;-1697.173,-2316.281;-1697.173,-2341.281;-1694.173,-2341.281;-1694.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1637.673,-2354.781;-1637.673,-2341.281;-1634.673,-2341.281;-1634.673,-2316.281;-1637.673,-2316.281;-1637.673,-2302.781;-1624.173,-2302.781;-1624.173,-2316.281;-1627.173,-2316.281;-1627.173,-2341.281;-1624.173,-2341.281;-1624.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1567.673,-2354.781;-1567.673,-2341.281;-1564.673,-2341.281;-1564.673,-2316.281;-1567.673,-2316.281;-1567.673,-2302.781;-1554.173,-2302.781;-1554.173,-2316.281;-1557.173,-2316.281;-1557.173,-2341.281;-1554.173,-2341.281;-1554.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1497.673,-2354.781;-1497.673,-2341.281;-1494.673,-2341.281;-1494.673,-2316.281;-1497.673,-2316.281;-1497.673,-2302.781;-1484.173,-2302.781;-1484.173,-2316.281;-1487.173,-2316.281;-1487.173,-2341.281;-1484.173,-2341.281;-1484.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1427.673,-2354.781;-1427.673,-2341.281;-1424.673,-2341.281;-1424.673,-2316.281;-1427.673,-2316.281;-1427.673,-2302.781;-1414.173,-2302.781;-1414.173,-2316.281;-1417.173,-2316.281;-1417.173,-2341.281;-1414.173,-2341.281;-1414.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1357.673,-2354.781;-1357.673,-2341.281;-1354.673,-2341.281;-1354.673,-2316.281;-1357.673,-2316.281;-1357.673,-2302.781;-1344.173,-2302.781;-1344.173,-2316.281;-1347.173,-2316.281;-1347.173,-2341.281;-1344.173,-2341.281;-1344.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1287.673,-2354.781;-1287.673,-2341.281;-1284.673,-2341.281;-1284.673,-2316.281;-1287.673,-2316.281;-1287.673,-2302.781;-1274.173,-2302.781;-1274.173,-2316.281;-1277.173,-2316.281;-1277.173,-2341.281;-1274.173,-2341.281;-1274.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1217.673,-2354.781;-1217.673,-2341.281;-1214.673,-2341.281;-1214.673,-2316.281;-1217.673,-2316.281;-1217.673,-2302.781;-1204.173,-2302.781;-1204.173,-2316.281;-1207.173,-2316.281;-1207.173,-2341.281;-1204.173,-2341.281;-1204.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1147.673,-2354.781;-1147.673,-2341.281;-1144.673,-2341.281;-1144.673,-2316.281;-1147.673,-2316.281;-1147.673,-2302.781;-1134.173,-2302.781;-1134.173,-2316.281;-1137.173,-2316.281;-1137.173,-2341.281;-1134.173,-2341.281;-1134.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1077.673,-2354.781;-1077.673,-2341.281;-1074.673,-2341.281;-1074.673,-2316.281;-1077.673,-2316.281;-1077.673,-2302.781;-1064.173,-2302.781;-1064.173,-2316.281;-1067.173,-2316.281;-1067.173,-2341.281;-1064.173,-2341.281;-1064.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-1007.673,-2354.781;-1007.673,-2341.281;-1004.673,-2341.281;-1004.673,-2316.281;-1007.673,-2316.281;-1007.673,-2302.781;-994.173,-2302.781;-994.173,-2316.281;-997.173,-2316.281;-997.173,-2341.281;-994.173,-2341.281;-994.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-937.673,-2354.781;-937.673,-2341.281;-934.673,-2341.281;-934.673,-2316.281;-937.673,-2316.281;-937.673,-2302.781;-924.173,-2302.781;-924.173,-2316.281;-927.173,-2316.281;-927.173,-2341.281;-924.173,-2341.281;-924.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-867.673,-2354.781;-867.673,-2341.281;-864.673,-2341.281;-864.673,-2316.281;-867.673,-2316.281;-867.673,-2302.781;-854.173,-2302.781;-854.173,-2316.281;-857.173,-2316.281;-857.173,-2341.281;-854.173,-2341.281;-854.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-797.673,-2354.781;-797.673,-2341.281;-794.673,-2341.281;-794.673,-2316.281;-797.673,-2316.281;-797.673,-2302.781;-784.173,-2302.781;-784.173,-2316.281;-787.173,-2316.281;-787.173,-2341.281;-784.173,-2341.281;-784.173,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (777.243,-2354.781;777.243,-2341.281;780.243,-2341.281;780.243,-2316.281;777.243,-2316.281;777.243,-2302.781;790.743,-2302.781;790.743,-2316.281;787.743,-2316.281;787.743,-2341.281;790.743,-2341.281;790.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (847.243,-2354.781;847.243,-2341.281;850.243,-2341.281;850.243,-2316.281;847.243,-2316.281;847.243,-2302.781;860.743,-2302.781;860.743,-2316.281;857.743,-2316.281;857.743,-2341.281;860.743,-2341.281;860.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (917.243,-2354.781;917.243,-2341.281;920.243,-2341.281;920.243,-2316.281;917.243,-2316.281;917.243,-2302.781;930.743,-2302.781;930.743,-2316.281;927.743,-2316.281;927.743,-2341.281;930.743,-2341.281;930.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (987.243,-2354.781;987.243,-2341.281;990.243,-2341.281;990.243,-2316.281;987.243,-2316.281;987.243,-2302.781;1000.743,-2302.781;1000.743,-2316.281;997.743,-2316.281;997.743,-2341.281;1000.743,-2341.281;1000.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1057.243,-2354.781;1057.243,-2341.281;1060.243,-2341.281;1060.243,-2316.281;1057.243,-2316.281;1057.243,-2302.781;1070.743,-2302.781;1070.743,-2316.281;1067.743,-2316.281;1067.743,-2341.281;1070.743,-2341.281;1070.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1127.243,-2354.781;1127.243,-2341.281;1130.243,-2341.281;1130.243,-2316.281;1127.243,-2316.281;1127.243,-2302.781;1140.743,-2302.781;1140.743,-2316.281;1137.743,-2316.281;1137.743,-2341.281;1140.743,-2341.281;1140.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1197.243,-2354.781;1197.243,-2341.281;1200.243,-2341.281;1200.243,-2316.281;1197.243,-2316.281;1197.243,-2302.781;1210.743,-2302.781;1210.743,-2316.281;1207.743,-2316.281;1207.743,-2341.281;1210.743,-2341.281;1210.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1267.243,-2354.781;1267.243,-2341.281;1270.243,-2341.281;1270.243,-2316.281;1267.243,-2316.281;1267.243,-2302.781;1280.743,-2302.781;1280.743,-2316.281;1277.743,-2316.281;1277.743,-2341.281;1280.743,-2341.281;1280.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1337.243,-2354.781;1337.243,-2341.281;1340.243,-2341.281;1340.243,-2316.281;1337.243,-2316.281;1337.243,-2302.781;1350.743,-2302.781;1350.743,-2316.281;1347.743,-2316.281;1347.743,-2341.281;1350.743,-2341.281;1350.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1407.243,-2354.781;1407.243,-2341.281;1410.243,-2341.281;1410.243,-2316.281;1407.243,-2316.281;1407.243,-2302.781;1420.743,-2302.781;1420.743,-2316.281;1417.743,-2316.281;1417.743,-2341.281;1420.743,-2341.281;1420.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1477.243,-2354.781;1477.243,-2341.281;1480.243,-2341.281;1480.243,-2316.281;1477.243,-2316.281;1477.243,-2302.781;1490.743,-2302.781;1490.743,-2316.281;1487.743,-2316.281;1487.743,-2341.281;1490.743,-2341.281;1490.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1547.243,-2354.781;1547.243,-2341.281;1550.243,-2341.281;1550.243,-2316.281;1547.243,-2316.281;1547.243,-2302.781;1560.743,-2302.781;1560.743,-2316.281;1557.743,-2316.281;1557.743,-2341.281;1560.743,-2341.281;1560.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1617.243,-2354.781;1617.243,-2341.281;1620.243,-2341.281;1620.243,-2316.281;1617.243,-2316.281;1617.243,-2302.781;1630.743,-2302.781;1630.743,-2316.281;1627.743,-2316.281;1627.743,-2341.281;1630.743,-2341.281;1630.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1687.243,-2354.781;1687.243,-2341.281;1690.243,-2341.281;1690.243,-2316.281;1687.243,-2316.281;1687.243,-2302.781;1700.743,-2302.781;1700.743,-2316.281;1697.743,-2316.281;1697.743,-2341.281;1700.743,-2341.281;1700.743,-2354.781)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-659.568,-2338.759;-669.114,-2329.213;-666.993,-2327.091;-684.671,-2309.414;-686.792,-2311.535;-696.338,-2301.989;-694.349,-2300;-679.235,-2300;-677.246,-2301.989;-679.367,-2304.11;-661.69,-2321.788;-659.568,-2319.667;-650.022,-2329.213)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BR.CE.E.1: BR must be enclosed by ChipEdge by 200 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (659.568,-2338.759;650.022,-2329.213;659.568,-2319.667;661.69,-2321.788;679.367,-2304.11;677.246,-2301.989;679.235,-2300;694.349,-2300;696.338,-2301.989;686.792,-2311.535;684.671,-2309.414;666.993,-2327.091;669.114,-2329.213)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (686.615,787.27;679.544,794.341;686.969,801.765;694.04,794.694)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (659.392,814.493;652.321,821.564;659.745,828.989;666.816,821.918)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-686.615,787.27;-694.04,794.694;-686.969,801.765;-679.544,794.341)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-659.392,814.493;-666.816,821.918;-659.745,828.989;-652.321,821.564)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-633.031,-546.197;-640.456,-538.773;-633.385,-531.702;-625.96,-539.126)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-660.255,-573.421;-667.679,-565.996;-660.608,-558.925;-653.184,-566.35)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (533.031,-446.197;525.96,-439.126;533.385,-431.702;540.456,-438.773)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (633.031,-546.197;625.96,-539.126;633.385,-531.702;640.456,-538.773)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (660.255,-573.421;653.184,-566.35;660.608,-558.925;667.679,-565.996)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'RR.WL.2: RR must be a rotated rectangle sized 8x8, 10x10.5, or 13x14 um'</category>
+   <cell>SPIN_CHAIN</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (560.255,-473.421;553.184,-466.35;560.608,-458.925;567.679,-465.996)</value>
+   </values>
+  </item>
+ </items>
+</report-database>
