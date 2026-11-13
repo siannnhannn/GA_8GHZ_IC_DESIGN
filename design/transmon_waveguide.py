@@ -127,15 +127,16 @@ def _layout(g, n, WA, WB):
     y_top = g["Qin"][1] + (n - 1) * pitch                  # first row of block A
     y_feed = g["start_y"] if g["start_y"] is not None else y_top + g["feed_clear"]
 
-    R = [(g["start_x"], y_feed), (x_f, y_feed, r), (x_f, g["yf2"], r), (*g["Q"], r),
-         (*g["W1"], rc), (*g["W2"], rc), (*g["Q2"], r), (x_A, g["Q2"][1], r), (x_A, y_top, r)]
+    R = [(g["start_x"], y_feed), (x_f, y_feed, r), (x_f, g["yf2"], r),
+     (*g["Qv"], rc), (*g["Q"], rc),
+     (*g["W1"], rc), (*g["W2"], rc), (*g["Q2"], r), (x_A, g["Q2"][1], r), (x_A, y_top, r)]
     R += _rows(y_top, n, pitch, x_Al, x_Al + WA, g["Qin"][0])   # last vertex is Qin
     R += [(*g["Wa"], rc), (*g["Wb"], rc), (*g["Qout"], r)]
     R += _rows(g["Qout"][1], n, pitch, x_Bl, x_Bl + WB, x_B)
     R += [(x_B, g["y_h"], r), (g["x_p3"], g["y_h"], rc), (g["x_p3"], g["y_b"], rc), (qx, g["y_b"])]
     M = [(2 * qx - q[0], q[1], *q[2:]) for q in reversed(R)][1:]
     # left end: stop at the end of the left slant run (drop the mirrored feed vertices)
-    M = M[:-5] + [(2 * qx - g["P1"][0], g["P1"][1])]
+    M = M[:-6] + [(2 * qx - g["P1"][0], g["P1"][1])]
     return R + M
 
 
@@ -163,7 +164,7 @@ class GiantAtomWaveguide(QComponent):
     default_options = Dict(
         # --- qubit geometry (match the myTransmon options)
         qubit_x="0mm",
-        qubit_y="-0.6mm",             # y of the neck/pad junction (myTransmon pos_y)
+        qubit_y="-0.5mm",             # y of the neck/pad junction (myTransmon pos_y)
         qubit_side_length="100um",   # myTransmon pad_side_length
         qubit_trace_width="25um",    # myTransmon trace_width (neck width)
         qubit_lead_length="350um",   # myTransmon lead_length (only used for the clearance check)
@@ -172,6 +173,7 @@ class GiantAtomWaveguide(QComponent):
         coupling_gap="10um",         # edge-to-edge distance, waveguide to qubit metal
         coupling_length="40um",      # length of every coupled run (centred on its side)
         leg_length="100um",          # legs perpendicular to the sides, leading into / out of the runs
+        entry_leg_length="60um",     # leg going up for drc error fix 
         coupling_fillet="30um",      # radius of the 90 deg corners right next to the coupled runs
         bump_height="100um",         # height of the bump that carries the bottom run (>= 2*coupling_fillet)
         feed_spacing="100um",        # feed line runs this far from the (parallel) line under it
@@ -245,7 +247,16 @@ class GiantAtomWaveguide(QComponent):
         # the feed comes in along a row `feed_spacing` above the row leaving run 1 and
         # meets the entry leg (the line through W1 along n1) at Q
         yf2 = Q2[1] + p.feed_spacing
-        Q = W1 + (yf2 - W1[1]) / n1[1] * n1
+        Q = W1 + p.entry_leg_length * n1                 # end of the short slanted leg
+        Qv = (Q[0], yf2)                                 # top of the vertical rise, where the feed turns right
+        # the corner radii must fit: 90 deg at W1 (rc), 36 deg at Q, 90 deg at Qv (both r)
+        phi_q = np.arccos(np.clip(n1[1], -1.0, 1.0))
+        t_q = rc * np.tan(phi_q / 2)
+        if p.entry_leg_length < rc + t_q - 1e-12:
+            raise ValueError("entry_leg_length is too short for the fillets at its ends.")
+        if yf2 - Q[1] < t_q + rc - 1e-12:
+            raise ValueError("The vertical rise is too short for its fillets; reduce entry_leg_length "
+                            "or increase feed_spacing.")
         # run 2 (lower side)
         Pa, Pb = O2 + s0 * u2, O2 + s1 * u2
         Wa, Wb = Pa - rc * u2, Pb + rc * u2
@@ -268,7 +279,7 @@ class GiantAtomWaveguide(QComponent):
                              "lower blocks; increase bump_height.")
 
         g = dict(qx=qx, start_x=p.start_x, start_y=p.start_y, pitch=pitch, r=r, rc=rc, P1=tuple(P1),
-                 Q=tuple(Q), yf2=yf2, feed_spacing=p.feed_spacing, W1=tuple(W1), W2=tuple(W2), Q2=tuple(Q2), Wa=tuple(Wa),
+                 Q=tuple(Q), Qv=tuple(Qv), yf2=yf2, feed_spacing=p.feed_spacing, W1=tuple(W1), W2=tuple(W2), Q2=tuple(Q2), Wa=tuple(Wa),
                  Wb=tuple(Wb), Qin=tuple(Qin), Qout=tuple(Qout), y_b=y_b, y_h=y_h,
                  x_p3=x_p3, x_blk=x_blk, feed_clear=p.feed_clearance)
 
