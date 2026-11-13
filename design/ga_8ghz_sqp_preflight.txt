@@ -2,12 +2,9 @@ SQUILL SQP 3.0 KLayout preflight v1.2
 Cell: SPIN_CHAIN
 DBU: 0.0005 um
 Mode: production
-Violations: 43
+Violations: 10
 
-BR.CE.E.1: 30
-M1.W.1: 1
 RR.WL.2: 10
-SE.DEV.MET.S.1: 2
 
 Not implemented; use official Calibre signoff:
 - POST.2 force-distribution symmetry (manual by specification)
