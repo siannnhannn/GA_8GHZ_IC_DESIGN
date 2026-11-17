@@ -175,18 +175,18 @@ class GiantAtomWaveguide(QComponent):
         leg_length="100um",          # legs perpendicular to the sides, leading into / out of the runs
         entry_leg_length="60um",     # leg going up for drc error fix 
         coupling_fillet="30um",      # radius of the 90 deg corners right next to the coupled runs
-        bump_height="100um",         # height of the bump that carries the bottom run (>= 2*coupling_fillet)
+        bump_height="150um",         # height of the bump that carries the bottom run (>= 2*coupling_fillet)
         feed_spacing="100um",        # feed line runs this far from the (parallel) line under it
         # --- serpentine blocks (x measured from qubit_x)
         block_x_min="0.75mm",        # left turns of all four blocks (closest to the qubit)
         serp_x_max="1.9mm",          # right-most x of the blocks = start of the launchpad
-        feed_clearance="150um",      # feed line runs this far above the top row of block A (only used if start_y is None)
+        feed_clearance="150um",      # feed line runs this far above the top row of block A (only used if start_y is None)  
         y_max="2.35mm",              # highest the feed line may reach
         y_min="-2.35mm",             # lowest the lower blocks may reach
-        target_length="22.2696mm",        # run centre -> next run centre
+        target_length="11.13479mm",        # run centre -> next run centre
         rows=0,                      # 0 = auto, else force an even row count
-        pitch="90um",               # row spacing, must be >= 2*fillet
-        fillet="45um",               # radius of all waveguide bends except those at the coupled runs
+        pitch="120um",               # row spacing, must be >= 2*fillet
+        fillet="60um",               # radius of all waveguide bends except those at the coupled runs
         # --- chip / layout
         start_x="2.0979mm",             # chip edge where the right end terminates
         start_y="1.2mm",                # y of the feed line / start of the waveguide (None = feed_clearance above block A)

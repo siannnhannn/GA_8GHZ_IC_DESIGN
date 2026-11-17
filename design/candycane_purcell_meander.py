@@ -16,7 +16,7 @@ from candycane_purcell import CandyCanePurcell
 #                     qubit's readout coupler), up, U-turn, down (chip-edge side)
 #Frequencies from Almanakly et al., "Driven giant atoms" (Table S6): qubit A's
 #resonator and filter at 9.8 GHz, qubit B's at 9.9 GHz. The resonators are
-#lambda/4 by Val's meander_length formula (3.03 and 3.00 mm); the filters are
+#lambda/4 (3.7115980428 mm); the filters are
 #shorter (2.42 and 2.39 mm drawn) because of the capacitance of their pad by
 #the readout line, as in the paper's device (see the tuner cell). The tuner
 #sets up_from_turn (filter) and down_from_turn (resonator). fillet = 70um makes each U-turn 140um wide. No meanders, like
