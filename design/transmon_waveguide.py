@@ -134,10 +134,17 @@ def _layout(g, n, WA, WB):
     R += [(*g["Wa"], rc), (*g["Wb"], rc), (*g["Qout"], r)]
     R += _rows(g["Qout"][1], n, pitch, x_Bl, x_Bl + WB, x_B)
     R += [(x_B, g["y_h"], r), (g["x_p3"], g["y_h"], rc), (g["x_p3"], g["y_b"], rc), (qx, g["y_b"])]
+    ### UNCOMMENT THE NEXT THREE LINES FOR SYMMETRIC WAVEGUIDE 
+    # Mirror the complete right-side waveguide onto the left side
     M = [(2 * qx - q[0], q[1], *q[2:]) for q in reversed(R)][1:]
-    # left end: stop at the end of the left slant run (drop the mirrored feed vertices)
-    M = M[:-6] + [(2 * qx - g["P1"][0], g["P1"][1])]
+
     return R + M
+
+    ### UNCOMMENT THE NEXT FOUR LINES FOR WAVEGUIDE OPEN ON ONE END  
+    # M = [(2 * qx - q[0], q[1], *q[2:]) for q in reversed(R)][1:]
+    # # left end: stop at the end of the left slant run
+    # M = M[:-6] + [(2 * qx - g["P1"][0], g["P1"][1])]
+    # return R + M
 
 
 class GiantAtomWaveguide(QComponent):
@@ -164,7 +171,7 @@ class GiantAtomWaveguide(QComponent):
     default_options = Dict(
         # --- qubit geometry (match the myTransmon options)
         qubit_x="0mm",
-        qubit_y="-0.5mm",             # y of the neck/pad junction (myTransmon pos_y)
+        qubit_y="-0.8mm",             # y of the neck/pad junction (myTransmon pos_y)
         qubit_side_length="100um",   # myTransmon pad_side_length
         qubit_trace_width="25um",    # myTransmon trace_width (neck width)
         qubit_lead_length="350um",   # myTransmon lead_length (only used for the clearance check)
@@ -178,18 +185,18 @@ class GiantAtomWaveguide(QComponent):
         bump_height="150um",         # height of the bump that carries the bottom run (>= 2*coupling_fillet)
         feed_spacing="100um",        # feed line runs this far from the (parallel) line under it
         # --- serpentine blocks (x measured from qubit_x)
-        block_x_min="0.75mm",        # left turns of all four blocks (closest to the qubit)
-        serp_x_max="1.9mm",          # right-most x of the blocks = start of the launchpad
+        block_x_min="0.9mm",        # left turns of all four blocks (closest to the qubit)
+        serp_x_max="2.1mm",          # right-most x of the blocks = start of the launchpad
         feed_clearance="150um",      # feed line runs this far above the top row of block A (only used if start_y is None)  
         y_max="2.35mm",              # highest the feed line may reach
         y_min="-2.35mm",             # lowest the lower blocks may reach
         target_length="11.13479mm",        # run centre -> next run centre
         rows=0,                      # 0 = auto, else force an even row count
-        pitch="120um",               # row spacing, must be >= 2*fillet
-        fillet="60um",               # radius of all waveguide bends except those at the coupled runs
+        pitch="130um",               # row spacing, must be >= 2*fillet
+        fillet="65um",               # radius of all waveguide bends except those at the coupled runs
         # --- chip / layout
         start_x="2.0979mm",             # chip edge where the right end terminates
-        start_y="1.2mm",                # y of the feed line / start of the waveguide (None = feed_clearance above block A)
+        start_y="0.4mm",                # y of the feed line / start of the waveguide (None = feed_clearance above block A)
         trace_width="10um",
         trace_gap="6um",
         layer="5",
