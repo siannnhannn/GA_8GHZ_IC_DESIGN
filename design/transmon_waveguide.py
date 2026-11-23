@@ -136,15 +136,15 @@ def _layout(g, n, WA, WB):
     R += [(x_B, g["y_h"], r), (g["x_p3"], g["y_h"], rc), (g["x_p3"], g["y_b"], rc), (qx, g["y_b"])]
     ### UNCOMMENT THE NEXT THREE LINES FOR SYMMETRIC WAVEGUIDE 
     # Mirror the complete right-side waveguide onto the left side
-    M = [(2 * qx - q[0], q[1], *q[2:]) for q in reversed(R)][1:]
+    # M = [(2 * qx - q[0], q[1], *q[2:]) for q in reversed(R)][1:]
 
-    return R + M
+    # return R + M
 
     ### UNCOMMENT THE NEXT FOUR LINES FOR WAVEGUIDE OPEN ON ONE END  
-    # M = [(2 * qx - q[0], q[1], *q[2:]) for q in reversed(R)][1:]
-    # # left end: stop at the end of the left slant run
-    # M = M[:-6] + [(2 * qx - g["P1"][0], g["P1"][1])]
-    # return R + M
+    M = [(2 * qx - q[0], q[1], *q[2:]) for q in reversed(R)][1:]
+    # left end: stop at the end of the left slant run
+    M = M[:-6] + [(2 * qx - g["P1"][0], g["P1"][1])]
+    return R + M
 
 
 class GiantAtomWaveguide(QComponent):
@@ -186,14 +186,14 @@ class GiantAtomWaveguide(QComponent):
         feed_spacing="100um",        # feed line runs this far from the (parallel) line under it
         # --- serpentine blocks (x measured from qubit_x)
         block_x_min="0.9mm",        # left turns of all four blocks (closest to the qubit)
-        serp_x_max="2.1mm",          # right-most x of the blocks = start of the launchpad
+        serp_x_max="2.2mm",          # right-most x of the blocks = start of the launchpad
         feed_clearance="150um",      # feed line runs this far above the top row of block A (only used if start_y is None)  
-        y_max="2.35mm",              # highest the feed line may reach
-        y_min="-2.35mm",             # lowest the lower blocks may reach
-        target_length="11.13479mm",        # run centre -> next run centre
+        y_max="2.30mm",              # highest the feed line may reach
+        y_min="-2.30mm",             # lowest the lower blocks may reach
+        target_length="19.7951895616mm",        # run centre -> next run centre
         rows=0,                      # 0 = auto, else force an even row count
-        pitch="130um",               # row spacing, must be >= 2*fillet
-        fillet="65um",               # radius of all waveguide bends except those at the coupled runs
+        pitch="90um",               # row spacing, must be >= 2*fillet
+        fillet="45um",               # radius of all waveguide bends except those at the coupled runs
         # --- chip / layout
         start_x="2.0979mm",             # chip edge where the right end terminates
         start_y="0.4mm",                # y of the feed line / start of the waveguide (None = feed_clearance above block A)
